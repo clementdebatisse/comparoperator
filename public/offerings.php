@@ -10,24 +10,22 @@
 
 <body>
     
-    <div class="container bg-info"> <!-- --------------------------------------------------- container -->
-        <nav class="row bg-primary justify-content-between bg-white">
-            <div class="col-auto">
-                <img src="images/icons/logo.png" width="30" height="30" alt="logo" />
-                <a class="navbar-brand text-dark col-auto" href="#">ComparOpérator</a>
-            </div>
-            <div class="col-auto">
-                <a class="nav-link text-secondary" href="#">Home <span class="sr-only">(current)</span></a>
-            </div>
-            <button type="button" class="btn btn-primary text-white align-right">
-                Sign up
-            </button>
-        </nav>
+    <div class="container bg-white"><!-- --------------------------------------------------- container -->
 
-        <main class="row bg-warning">
-            <div class="col-md-10 bg-info">
+<!-- -------------------------------------------------------------navbar-------------------------------------------- -->
+
+<div class="fixed-top">
+    <?php include("includes/navbar.php"); ?>
+</div>
+
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------offerings---------------------------------------------------------- -->
+
+        <main class="row">
+            <div class="col-md-10 bg-white">
                 <div class="row bg-warning">
-                    <div class="col-md-6 bg-info">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -58,7 +56,7 @@
 
 
 
-                    <div class="col-md-6 bg-secondary">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -83,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 bg-secondary">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -109,7 +107,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 bg-secondary">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -134,7 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 bg-secondary">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -159,7 +157,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 bg-secondary">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -184,7 +182,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 bg-secondary">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -209,7 +207,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 bg-secondary">
+                    <div class="col-md-6 bg-white">
                         <div class="card">
                             <img class="card-img-top rounded" src="images/destinations/0001.jpg" width="250px"
                                 height="250px" alt="One to" />
@@ -236,7 +234,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 bg-white">
+            <div class="col-md-2 bg-white align-middle">
                 <img class="card-img-top rounded mb-3" src="images/destinations/0005.jpg" alt="Prenium TO" />
                 <h5 class="card-title font-weight-bold text-center">
                     <u>Dubaï ♔</u>
@@ -257,9 +255,14 @@
             
         </main>
 
-        <footer class="row bg-primary">
-            footer
-        </footer>
+<!-- ----------------------------------------footer------------------------------------------------------- -->
+
+<?php include("includes/footer.php"); ?>
+
+
+<!-- ----------------------------------------footer end------------------------------------ -->
+            </div>
+
     </div><!-- ---------------------------------------------------------- /container -->
 </body>
 
