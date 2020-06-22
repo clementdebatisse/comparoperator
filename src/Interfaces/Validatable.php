@@ -48,7 +48,7 @@ interface Validatable
      * @note
      *   Raw data of a field is lost if its filter fails !
      * 
-     * @return self
+     * @return $this
      */
     public function validate();
 }

@@ -9,6 +9,7 @@ use Templates\Nav;
 use Templates\Footer;
 use Templates\Image;
 use Templates\InlinedCss;
+use Templates\LocationCard;
 
 /**
  * 
@@ -16,17 +17,17 @@ use Templates\InlinedCss;
 class Home extends View
 {
     /**
+     * @var \Entities\Locations|]
+     */
+    private $locations = [];
+    /**
      * Define defaults, take arguments
      */
-    // public function __construct(array $args = [])
     public function __construct(Controller $controller)
     {
         parent::__construct($controller);
-        $defaults = [
-            'row_count' => 12,
-            'col_count' => 12,
-        ];
-        $this->args = array_replace($defaults, $this->args);
+
+        $this->locations = &$this->args['data']['locations'];
     }
     /**
      * todo
@@ -35,33 +36,63 @@ class Home extends View
     public function compose(): self
     {
 
+        $thumbnail_size = Image::getSize(
+            ROOT . 'public/' . $this->locations[0]->data['thumbnail']
+        );
+
+        $cards = [];
+        foreach ($this->locations as $location) {
+            $cards[] = new LocationCard(
+                new Image(
+                    $location->data['thumbnail'],
+                    $location->data['name'],
+                    $thumbnail_size[0],
+                    $thumbnail_size[1],
+                    'card-img-top img-fluid'
+                ),
+                $location->data['name'],
+                'Description de ' . $location->data['name'],
+                $location->data['offering_count']
+            );
+        }
+
         $this->components['css'] = [
-            new InlinedCss(['resources/css/style.min.css'])
+            // new InlinedCss([ROOT.'resources/css/style.min.css']),
+            new InlinedCss(['css/style.css'])
         ];
 
         $this->components['nav'] = [
-            new Nav([
-                'Home' => 'index.php?controller=Home',
-                'List Patient' => '?controller=Patient&action=List',
-                'Add Patient' => '?controller=Patient&action=Add',
-                'Minichat' => '?controller=Minichat',
-            ])
+            new Nav(
+                new Image('images/icons/logo.png', 'ComparOperator', 30, 30),
+                [
+                    'Home' => 'index.php?controller=Home',
+                    'Admin' => '?controller=Dashboard&action=Admin',
+                    'Operator' => '?controller=Dashboard&action=Admin',
+                ],
+                0,
+                /**
+                 * @todo Check how stacking a query like that with a GET form
+                 *       works.
+                 */
+                'index.php',
+                'Sign up',
+                'index.php?controller=Home&action=Signup',
+            )
         ];
 
-        $this->components['content'] = [
-            new Image('public/images/icons/cross.svg', 'a red cross'),
-            new Image('public/images/icons/cross.svg', 'a red cross', 64, 64),
-            new Image('public/images/icons/cross.svg', 'a red cross', 128, 128),
-        ];
+
+        $this->components['content'] = $cards;
+
+        $this->components['ads'] = [$cards[0]];
 
 
         $this->components['footer'] = [
             new Footer([
-                'Minichat' => '?controller=MinichatAPI',
-                '1x1' => '?controller=Home&action=value&row_count=1&col_count=1',
-                '3x3' => '?controller=Home&action=value&row_count=3&col_count=3',
-                '6x6' => '?controller=Home&action=value&row_count=6&col_count=6',
-                '12x12' => '?controller=Home&action=value&row_count=12&col_count=12',
+                (new Image('images/icons/logo.png', 'ComparOperator', 30, 30))
+                    ->render() => 'index.php?controller=Home',
+                'Home' => 'index.php?controller=Home',
+                'Admin' => '?controller=Dashboard&action=Admin',
+                'Operator' => '?controller=Dashboard&action=Admin',
             ])
         ];
         return $this;

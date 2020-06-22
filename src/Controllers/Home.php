@@ -8,10 +8,6 @@ declare(strict_types=1);
 
 namespace Controllers;
 
-use Models\Model;
-use Views\View;
-
-
 /**
  * 
  */
@@ -30,6 +26,11 @@ class Home extends Controller
     public function runDefault(array $args = []): void
     {
         $this->set($args);
+        $this->layout = 'Home';
+        $this->args['model'] = 'ComparOperatorAPI';
+        $this->loadModel();
+        $this->args['data']['locations'] = $this->model->getLocations(50, 0);
+        // echo '<pre>'.var_export($this->args['data'], true).'</pre><hr />';
         $this->serve();
     }
 
@@ -50,7 +51,7 @@ class Home extends Controller
         /* Dispatcher passed array $args is accessible in $arguments */
         // $this->args['model'] = $associated_class;
         $this->args['view'] = 'Error404';
-        // $this->layout = 'OptionalSpecificLayout';
+        $this->layout = 'Minimal';
         $this->serve();
     }
 

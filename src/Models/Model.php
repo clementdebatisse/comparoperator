@@ -23,6 +23,10 @@ abstract class Model
     public $args = [];
     
     protected $data = [];
+
+    /**
+     * @var \Controllers\Controller
+     */
     protected $controller;
 
     public function __construct(Controller $controller)

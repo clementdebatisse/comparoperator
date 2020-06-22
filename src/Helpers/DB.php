@@ -48,7 +48,8 @@ class DB
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => false,
         ];
-        $this->options = array_replace($default_options, $options);
+        // $this->options = array_replace($default_options, $options);
+        $this->options = $options + $default_options;
 
         /* lazy connect, when and if needed */
         $this->connected_to = '';

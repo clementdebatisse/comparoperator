@@ -49,6 +49,16 @@ VALUES(
     INET_ATON('127.0.0.1')
 );
 
+SELECT
+    `user_id`,
+    `name`,
+    `created_at`,
+    `ip`
+FROM
+    `users`
+WHERE
+    `user_id` = LAST_INSERT_ID();
+
 -- --------------------------------------------------------
 --
 -- public function getLocations(int $count = 10, int $offset = 0): array
@@ -65,13 +75,15 @@ LIMIT 10 OFFSET 0;
 
 -- --------------------------------------------------------
 --
--- public function getOfferings(string $location_name, int $count = 10, int $offset = 0): array
+-- public function getOfferings(string $location, int $count = 10, int $offset = 0): array
 --
 SELECT
     `destinations`.`destination_id`,
+    `destinations`.`operator_id`,
+    `destinations`.`created_at`,
+    `destinations`.`location`,
     `destinations`.`price`,
     `destinations`.`thumbnail`,
-    `destinations`.`operator_id`,
     `operators`.`name` AS `operator`,
     `operators`.`website`,
     `operators`.`logo`,
@@ -91,7 +103,9 @@ ON
 WHERE
     `destinations`.`location` = 'Osaka'
 GROUP BY
-    `operators`.`operator_id`    
+    `operators`.`operator_id`
+ORDER BY
+    `destinations`.`created_at` DESC
 LIMIT 10 OFFSET 0;
 --     `destinations`.`destination_id`,
 --     `destinations`.`price`,
@@ -240,6 +254,7 @@ VALUES
         600,
         'images/products/destinations/0001.jpg'
     );
+    
 SELECT
     `destination_id`,
     `operator_id`,

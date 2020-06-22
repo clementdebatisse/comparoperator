@@ -32,27 +32,27 @@ class Image implements Templatable
      *   - [ ] Implement a InlinedSvg component
      */
     public function __construct(
-        string $path = 'public/images/icons/spinner.svg',
+        string $path = 'images/icons/spinner.svg',
         string $alt = '',
         ?int $width = NULL,
         ?int $height = NULL,
         string $class = '',
         bool $lazy = true
     ) {
-        $img_path = ROOT . $path;
+        // $img_path = ROOT . $path;
 
-        if (is_file($img_path)) {
-            $this->data['path'] = $path;
-        } else {
-            $this->data['path'] = 'public/images/icons/spinner.svg';
-            $width = 64;
-            $height = 64;
-        }
-
+        // if (is_file($img_path)) {
+        //     $this->data['path'] = $path;
+        // } else {
+        //     $this->data['path'] = 'images/icons/spinner.svg';
+        //     $width = 64;
+        //     $height = 64;
+        // }
+        $this->data['path'] = $path;
         $this->data['alt'] = $alt;
 
         if (is_null($width) || is_null($height)) {
-            [$this->data['width'], $this->data['height']] = self::getSize($img_path);
+            [$this->data['width'], $this->data['height']] = self::getSize($path);
         }else{
             $this->data['width'] = $width;
             $this->data['height'] = $height;
@@ -113,6 +113,7 @@ class Image implements Templatable
     public function render(): string
     {
         $this->data['lazy'] ? $lazy = 'loading="lazy"' : $lazy = '';
+        
         return <<<TEMPLATE
 <img
     src="{$this->data['path']}"

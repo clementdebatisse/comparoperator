@@ -103,17 +103,21 @@ class Dispatcher
                 'run' . ($this->request['action'] ?? 'Default');
 
             /* use existing controller or load one */
-            if (method_exists(
-                $this->controller ?? $this->load(),
-                $this->request['action']
-            )) {
-                /* requested action exists, run it */
-                $this->controller->{$this->request['action']}($this->request);
-            } else {
-                /* run default action */
-                $this->request['action'] = 'runDefault';
-                $this->controller->runDefault($this->request);
-            }
+            ($this->controller ?? $this->load())
+                ->{$this->request['action']}($this->request);
+
+            // /* use existing controller or load one */
+            // if (method_exists(
+            //     $this->controller ?? $this->load(),
+            //     $this->request['action']
+            // )) {
+            //     /* requested action exists, run it */
+            //     $this->controller->{$this->request['action']}($this->request);
+            // } else {
+            //     /* run default action */
+            //     $this->request['action'] = 'runDefault';
+            //     $this->controller->runDefault($this->request);
+            // }
         }
 
         return $this;

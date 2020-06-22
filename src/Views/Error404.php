@@ -26,7 +26,7 @@ class Error404 extends View
             'row_count' => 12,
             'col_count' => 12,
         ];
-        $this->args = array_replace($defaults, $this->args);
+        $this->args = $this->args + $defaults;
     }
     /**
      * todo
@@ -36,7 +36,7 @@ class Error404 extends View
     {
 
         $this->components['css'] = [
-            new InlinedCss(['resources/css/style.min.css'])
+            new InlinedCss([ROOT.'resources/css/style.min.css'])
         ];
 
         $this->components['nav'] = [
@@ -49,9 +49,9 @@ class Error404 extends View
         ];
 
         $this->components['content'] = [
-            new Image('public/images/icons/cross.svg', 'a red cross'),
-            new Image('public/images/icons/cross.svg', 'a red cross', 64, 64),
-            new Image('public/images/icons/cross.svg', 'a red cross', 128, 128),
+            new Image('images/icons/cross.svg', 'a red cross'),
+            new Image('images/icons/cross.svg', 'a red cross', 64, 64),
+            new Image('images/icons/cross.svg', 'a red cross', 128, 128),
         ];
 
 

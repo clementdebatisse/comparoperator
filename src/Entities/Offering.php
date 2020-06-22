@@ -10,9 +10,9 @@ namespace Entities;
 class Offering extends Entity
 {
     /**
-     * @var array [ string $field_name => mixed $filter_definition ]
+     * @var array <string, mixed>[] [$field_name => $filter_definition]
      */
-    protected $definitions =
+    const definitions =
     [
         'destination_id' => [
             'filter' => FILTER_VALIDATE_INT,
@@ -20,6 +20,28 @@ class Offering extends Entity
                 'min_range' => 1,
                 'max_range' => 16777215
             ]
+        ],
+        'operator_id' => [
+            'filter' => FILTER_VALIDATE_INT,
+            'options' => [
+                'min_range' => 1,
+                'max_range' => 16777215
+            ]
+        ],
+        'created_at' => [
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => [
+                /**
+                 * @note
+                 *   This validates the format but does NOT check for
+                 *   impossible dates.
+                 */
+                'regexp' => '/^[0-9]{4}-[0-1][0-9]-[0-3][0-9] [0-2][0-9]:[0-5][0-9]:[0-5][0-9]$/'
+            ]
+        ],
+        'location' => [
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => ['regexp' => '/^([A-Za-z0-9_\-\s]+)$/']
         ],
         'price' => [
             'filter' => FILTER_VALIDATE_FLOAT
@@ -29,13 +51,6 @@ class Offering extends Entity
             'options' => [
                 'regexp' => '/^(?!.*--|.*\/\/|.*\\\\\\\\|.*\.\.)[\\\\\/A-Za-z0-9_\-\.]+\.(?:jpg|jpeg|gif|svg|webp|png)$/'
             ],
-        ],
-        'operator_id' => [
-            'filter' => FILTER_VALIDATE_INT,
-            'options' => [
-                'min_range' => 1,
-                'max_range' => 16777215
-            ]
         ],
         'operator' => [
             'filter' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
@@ -59,10 +74,15 @@ class Offering extends Entity
     ];
 
     /**
-     * @param  array $data [ string $field_name => mixed $value ]
+     * List of field names required for insertion in database.
+     * 
+     * @var array string[]
      */
-    public function __construct(array $data)
-    {
-        $this->data = $data;
-    }
+    const required_fields = [
+        'operator_id',
+        'created_at',
+        'location',
+        'price',
+        'thumbnail'
+    ];
 }

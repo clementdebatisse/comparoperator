@@ -30,7 +30,13 @@ abstract class Controller //implements Loadable
         $this->args = $args;
 
         /* Get default associated view, model name */
-        $associated_class = get_class($this);
+        /**
+         * @note 
+         *   Use get_class() if you need evalution at runtime.
+         *   Use ::class if you need evalution at compile time.
+         */
+        // $associated_class = get_class($this);
+        $associated_class = static::class;
         $namespace_end = strrpos($associated_class, '\\');
         $associated_class = substr($associated_class, $namespace_end + 1);
 
@@ -49,10 +55,11 @@ abstract class Controller //implements Loadable
      */
     public function set(array $args): self
     {
-        $this->args = array_merge(
-            $this->args,
-            $args
-        );
+        // $this->args = array_merge(
+        //     $this->args,
+        //     $args
+        // );
+        $this->args = $args + $this->args;
         return $this;
     }
 
@@ -105,43 +112,6 @@ abstract class Controller //implements Loadable
         /* keep it around for optional caching */
         $this->rendered_page = $rendered_page;
 
-        /* test and placeholder for deferred components ----------------------*/
-        /**
-         *   - [ ] Consider this is probably only useful for components that
-         *         take a while to render
-         *   - [ ] Consider using Js/Ajax to make that part asynchronous,
-         *         especially if it hits DB
-         */
-        /* optional output buffering */
-        // // if (ob_get_level() == O) {ob_start()};
-
-        // for ($i = 0; $i < 3; $i++) {
-        //     echo '<h2>DEFERRED COMPONENT PLACEHOLDER</h2>';
-        //     echo '<img src="public/images/icons/spinner.svg" alt="loading !">';
-        //     /**
-        //      * note
-        //      *   Some padding may be necessary to force the webserver and
-        //      *   client browser to push current output.
-        //      * 
-        //      *   Client browser have different schemes for output bufffering
-        //      */
-        //     echo str_pad('', 4096);
-        //     // ob_flush();
-        //     flush();
-        //     sleep(1);
-        // }
-        // // ob_end_flush();
-
-        /* close the session -------------------------------------------------*/
-        // session_write_close();
-        /**
-         * todo
-         *   - [x] Use Js/Ajax
-         */
-
-        /* output buffering OFF */
-        // echo ob_get_clean();
-
         return $this;
     }
 
@@ -173,9 +143,9 @@ abstract class Controller //implements Loadable
      * @return void
      * 
      * @todo Research if that use case for __call is ill-advised.
-     */    
+     */
     abstract public function __call(string $name, array $arguments): void;
-   
+
 
     /**
      * note

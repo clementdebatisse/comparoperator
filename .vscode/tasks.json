@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label":"watch - bundle js",
+            "label": "watch - bundle js",
             "command": "watchify",
             "group": "build",
             "isBackground": true,
@@ -12,26 +12,37 @@
                 "resources/js/script.js",
                 "-o",
                 "public/js/bundle.js",
-                "--verbose",
+                "--verbose"
             ],
             "options": {
-              "cwd": "${workspaceFolder}",
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": []
         },
         {
-            "label":"watch - compile sass",
+            "label": "watch - compile sass",
             "command": "sass",
             "group": "build",
             "isBackground": true,
             "args": [
                 "--watch",
-                "resources/sass/:public/css",
+                "resources/sass/:public/css"
             ],
             "options": {
-              "cwd": "${workspaceFolder}",
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "test-php",
+            "problemMatcher": [],
+            "label": "npm: test-php",
+            "detail": "./vendor/bin/phpunit --colors tests",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         }
     ]
 }

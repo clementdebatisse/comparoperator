@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>    Documentation &raquo; Markers
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="icon" href="../images/favicon.ico"/>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+    </head>
+<body>
+<header class="phpdocumentor-top-header"></header>
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">Documentation</h1>
+    </section>
+</header>
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    <section data-search-form class="phpdocumentor-search">
+        <h1 class="phpdocumentor-sidebar__category-header">Search</h1>
+        <label class="phpdocumentor-label">
+            <span class="visually-hidden">Search for</span>
+            <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+        </label>
+    </section>
+
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
+            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/controllers.html"><abbr title="\Controllers">Controllers</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/entities.html"><abbr title="\Entities">Entities</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/helpers.html"><abbr title="\Helpers">Helpers</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/interfaces.html"><abbr title="\Interfaces">Interfaces</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/layouts.html"><abbr title="\Layouts">Layouts</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/models.html"><abbr title="\Models">Models</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                                    <li><a href="../namespaces/models-endpoints.html"><abbr title="\Models\Endpoints">Endpoints</abbr></a></li>
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/templates.html"><abbr title="\Templates">Templates</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/views.html"><abbr title="\Views">Views</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+            
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
+        <h2 class="phpdocumentor-sidebar__root-package"><a href="../graphs/classes.html">Class Diagram</a></h2>
+        <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+</aside>
+
+        <div class="nine phpdocumentor-columns phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+        <li><a href="../index.html">Home</a></li>
+    </ul>
+
+    <div class="phpdocumentor-row">
+        <h2 class="phpdocumentor-content__title">Markers</h2>
+
+                    <h3>Table of Contents</h3>
+            <table class="phpdocumentor-table_of_contents">
+                                                            <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Controllers/API.php">src/Controllers/API.php</a></td>
+                            <td class="phpdocumentor-cell">3</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Controllers/ComparOperatorAPI.php">src/Controllers/ComparOperatorAPI.php</a></td>
+                            <td class="phpdocumentor-cell">13</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Controllers/Controller.php">src/Controllers/Controller.php</a></td>
+                            <td class="phpdocumentor-cell">1</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Controllers/Dashboard.php">src/Controllers/Dashboard.php</a></td>
+                            <td class="phpdocumentor-cell">1</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Controllers/Home.php">src/Controllers/Home.php</a></td>
+                            <td class="phpdocumentor-cell">1</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Entities/Entity.php">src/Entities/Entity.php</a></td>
+                            <td class="phpdocumentor-cell">6</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Entities/Generic.php">src/Entities/Generic.php</a></td>
+                            <td class="phpdocumentor-cell">5</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Helpers/Cache.php">src/Helpers/Cache.php</a></td>
+                            <td class="phpdocumentor-cell">4</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Helpers/CacheItem.php">src/Helpers/CacheItem.php</a></td>
+                            <td class="phpdocumentor-cell">1</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Helpers/Dispatcher.php">src/Helpers/Dispatcher.php</a></td>
+                            <td class="phpdocumentor-cell">3</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Interfaces/Cacheable.php">src/Interfaces/Cacheable.php</a></td>
+                            <td class="phpdocumentor-cell">1</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Interfaces/Loadable.php">src/Interfaces/Loadable.php</a></td>
+                            <td class="phpdocumentor-cell">1</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Models/ComparOperatorAPI.php">src/Models/ComparOperatorAPI.php</a></td>
+                            <td class="phpdocumentor-cell">4</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Models/Endpoints/DestinationEndpoint.php">src/Models/Endpoints/DestinationEndpoint.php</a></td>
+                            <td class="phpdocumentor-cell">2</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Models/Endpoints/OperatorEndpoint.php">src/Models/Endpoints/OperatorEndpoint.php</a></td>
+                            <td class="phpdocumentor-cell">2</td>
+                        </tr>
+                                                                                <tr>
+                            <td class="phpdocumentor-cell"><a href="#src/Models/Endpoints/UserEndpoint.php">src/Models/Endpoints/UserEndpoint.php</a></td>
+                            <td class="phpdocumentor-cell">3</td>
+                        </tr>
+                                                </table>
+        
+                    <a id="src/Controllers/API.php"></a>
+            <h3><abbr title="src/Controllers/API.php">API.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">44</td>
+                        <td class="phpdocumentor-cell">- [ ] Implement API rate limiting
++ [ ] See https://www.yiiframework.com/doc/guide/2.0/en/rest-rate-limiting</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">200</td>
+                        <td class="phpdocumentor-cell">- [ ] Handle Dispatcher-level cache for json emission more gracefully</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">217</td>
+                        <td class="phpdocumentor-cell">Research if that use case for __call is ill-advised.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Controllers/ComparOperatorAPI.php"></a>
+            <h3><abbr title="src/Controllers/ComparOperatorAPI.php">ComparOperatorAPI.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">136</td>
+                        <td class="phpdocumentor-cell">Translate PDO/MySQL errors into meaningful response for the
+RESTish API.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">136</td>
+                        <td class="phpdocumentor-cell">Add a json cache/buffer.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">136</td>
+                        <td class="phpdocumentor-cell">Have a look at PDO statement errorInfo().</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">136</td>
+                        <td class="phpdocumentor-cell">Handle situation where vote has already been cast.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">260</td>
+                        <td class="phpdocumentor-cell">Translate PDO/MySQL errors into meaningful response for the
+RESTish API.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">260</td>
+                        <td class="phpdocumentor-cell">Add a json cache/buffer.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">260</td>
+                        <td class="phpdocumentor-cell">Have a look at PDO statement errorInfo().</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">360</td>
+                        <td class="phpdocumentor-cell">Translate PDO/MySQL errors into meaningful response for the
+RESTish API.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">360</td>
+                        <td class="phpdocumentor-cell">Add a json cache/buffer.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">360</td>
+                        <td class="phpdocumentor-cell">Have a look at PDO statement errorInfo().</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">457</td>
+                        <td class="phpdocumentor-cell">Translate PDO/MySQL errors into meaningful response for the
+RESTish API.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">457</td>
+                        <td class="phpdocumentor-cell">Add a json cache/buffer.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">457</td>
+                        <td class="phpdocumentor-cell">Have a look at PDO statement errorInfo().</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Controllers/Controller.php"></a>
+            <h3><abbr title="src/Controllers/Controller.php">Controller.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">147</td>
+                        <td class="phpdocumentor-cell">Research if that use case for __call is ill-advised.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Controllers/Dashboard.php"></a>
+            <h3><abbr title="src/Controllers/Dashboard.php">Dashboard.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">48</td>
+                        <td class="phpdocumentor-cell">Research if that use case for __call is ill-advised.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Controllers/Home.php"></a>
+            <h3><abbr title="src/Controllers/Home.php">Home.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">49</td>
+                        <td class="phpdocumentor-cell">Research if that use case for __call is ill-advised.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Entities/Entity.php"></a>
+            <h3><abbr title="src/Entities/Entity.php">Entity.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">127</td>
+                        <td class="phpdocumentor-cell">Consider that $this-&gt;is_valid is obsolete and misleading if
+anything fiddles with $this-&gt;data.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">127</td>
+                        <td class="phpdocumentor-cell">Consider either not storing a misleading is_valid state or
+or invalidating it in a $this-&gt;data setter and restricted access.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">161</td>
+                        <td class="phpdocumentor-cell">Document the fact that false is a reserved value in Entity</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">161</td>
+                        <td class="phpdocumentor-cell">Consider using int instead.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">161</td>
+                        <td class="phpdocumentor-cell">Consider FILTER_NULL_ON_FAILURE.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">200</td>
+                        <td class="phpdocumentor-cell">Figure out how to work with self return type and inheritance or
+drop it.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Entities/Generic.php"></a>
+            <h3><abbr title="src/Entities/Generic.php">Generic.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">142</td>
+                        <td class="phpdocumentor-cell">Consider that $this-&gt;is_valid is obsolete and misleading if
+anything fiddles with $this-&gt;data.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">142</td>
+                        <td class="phpdocumentor-cell">Consider either not storing a misleading is_valid state or
+or invalidating it in a $this-&gt;data setter and restricted access.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">173</td>
+                        <td class="phpdocumentor-cell">Document the fact that false is a reserved value in Entity</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">173</td>
+                        <td class="phpdocumentor-cell">Consider using int instead.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">173</td>
+                        <td class="phpdocumentor-cell">Consider FILTER_NULL_ON_FAILURE.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Helpers/Cache.php"></a>
+            <h3><abbr title="src/Helpers/Cache.php">Cache.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">16</td>
+                        <td class="phpdocumentor-cell">- [x] Forbid instancing multiple Cache with the same name</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">59</td>
+                        <td class="phpdocumentor-cell">Consider storing ttl in each CacheItem for fine-grained tuning.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">59</td>
+                        <td class="phpdocumentor-cell">Consider storing expires_at in each CacheItem wether using coarse
+or fine grained ttl values.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">89</td>
+                        <td class="phpdocumentor-cell">Decide if keeping a flipped [$filename =&gt; $key] as a ghetto set
+is worth it to speed up unique filename collision detection</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Helpers/CacheItem.php"></a>
+            <h3><abbr title="src/Helpers/CacheItem.php">CacheItem.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">74</td>
+                        <td class="phpdocumentor-cell">See why bench-cache-serialization is NOT using associative array
+decoding option.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Helpers/Dispatcher.php"></a>
+            <h3><abbr title="src/Helpers/Dispatcher.php">Dispatcher.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">94</td>
+                        <td class="phpdocumentor-cell">Move the controller instancing logic to a method in Controller base
+class that returns the appropriate Controller all setup with given
+request as args.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">131</td>
+                        <td class="phpdocumentor-cell">Move the controller instancing logic to a method in Controller base
+class that returns the appropriate Controller all setup with given
+request as args.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">146</td>
+                        <td class="phpdocumentor-cell">Use Cache class
+
+note
+  This is short-circuited until upgraded Cache is plugged in.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Interfaces/Cacheable.php"></a>
+            <h3><abbr title="src/Interfaces/Cacheable.php">Cacheable.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">18</td>
+                        <td class="phpdocumentor-cell">Change return type hint for cache() to Controller if no other type are
+used.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Interfaces/Loadable.php"></a>
+            <h3><abbr title="src/Interfaces/Loadable.php">Loadable.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">18</td>
+                        <td class="phpdocumentor-cell">Change return type hint for load() to Controller if no other type are
+used.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Models/ComparOperatorAPI.php"></a>
+            <h3><abbr title="src/Models/ComparOperatorAPI.php">ComparOperatorAPI.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">26</td>
+                        <td class="phpdocumentor-cell">Return entities instead of assoc arrays in next more oop-ish
+iteration.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">26</td>
+                        <td class="phpdocumentor-cell">Consider returning a generic &#039;EntityInterface&#039; instead of an entity
+to be able to move things around in a specific entity
+implementation and NOT break to many things.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">26</td>
+                        <td class="phpdocumentor-cell">Break-up API into multiple files by endpoints.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">26</td>
+                        <td class="phpdocumentor-cell">Consider using traits for endpoints and composing API by using endpoint
+traits.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Models/Endpoints/DestinationEndpoint.php"></a>
+            <h3><abbr title="src/Models/Endpoints/DestinationEndpoint.php">DestinationEndpoint.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">15</td>
+                        <td class="phpdocumentor-cell">Break-up API into multiple files by endpoints.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">15</td>
+                        <td class="phpdocumentor-cell">Consider using traits for endpoints and composing API by using endpoint
+traits.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Models/Endpoints/OperatorEndpoint.php"></a>
+            <h3><abbr title="src/Models/Endpoints/OperatorEndpoint.php">OperatorEndpoint.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">15</td>
+                        <td class="phpdocumentor-cell">Break-up API into multiple files by endpoints.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">15</td>
+                        <td class="phpdocumentor-cell">Consider using traits for endpoints and composing API by using endpoint
+traits.</td>
+                    </tr>
+                                </tbody>
+            </table>
+                    <a id="src/Models/Endpoints/UserEndpoint.php"></a>
+            <h3><abbr title="src/Models/Endpoints/UserEndpoint.php">UserEndpoint.php</abbr></h3>
+            <table>
+                <thead>
+                <tr>
+                    <th class="phpdocumentor-heading">Type</th>
+                    <th class="phpdocumentor-heading">Line</th>
+                    <th class="phpdocumentor-heading">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">17</td>
+                        <td class="phpdocumentor-cell">Break-up API into multiple files by endpoints.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">17</td>
+                        <td class="phpdocumentor-cell">Consider using traits for endpoints and composing API by using endpoint
+traits.</td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell">TODO</td>
+                        <td class="phpdocumentor-cell">139</td>
+                        <td class="phpdocumentor-cell">Consider not executing the query if validates on a required field.</td>
+                    </tr>
+                                </tbody>
+            </table>
+            </div>
+            <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+                <h2>Search results</h2>
+                <ul class="phpdocumentor-search-results__entries">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

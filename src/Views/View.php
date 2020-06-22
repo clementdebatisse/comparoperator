@@ -51,10 +51,11 @@ abstract class View implements Layoutable
      */
     public function set(array $args): self
     {
-        $this->args = array_merge(
-            $this->args,
-            $args
-        );
+        // $this->args = array_merge(
+        //     $this->args,
+        //     $args
+        // );
+        $this->args = $args + $this->args;
         return $this;
     }
 

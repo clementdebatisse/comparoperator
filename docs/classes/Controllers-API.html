@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="icon" href="../images/favicon.ico"/>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+    </head>
+<body>
+<header class="phpdocumentor-top-header"></header>
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">Documentation</h1>
+    </section>
+</header>
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    <section data-search-form class="phpdocumentor-search">
+        <h1 class="phpdocumentor-sidebar__category-header">Search</h1>
+        <label class="phpdocumentor-label">
+            <span class="visually-hidden">Search for</span>
+            <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+        </label>
+    </section>
+
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
+            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/controllers.html"><abbr title="\Controllers">Controllers</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/entities.html"><abbr title="\Entities">Entities</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/helpers.html"><abbr title="\Helpers">Helpers</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/interfaces.html"><abbr title="\Interfaces">Interfaces</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/layouts.html"><abbr title="\Layouts">Layouts</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/models.html"><abbr title="\Models">Models</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                                    <li><a href="../namespaces/models-endpoints.html"><abbr title="\Models\Endpoints">Endpoints</abbr></a></li>
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/templates.html"><abbr title="\Templates">Templates</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/views.html"><abbr title="\Views">Views</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+            
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
+        <h2 class="phpdocumentor-sidebar__root-package"><a href="../graphs/classes.html">Class Diagram</a></h2>
+        <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+</aside>
+
+        <div class="nine phpdocumentor-columns phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+    <li><a href="../index.html">Home</a></li>
+                        <li><a href="../namespaces/controllers.html">Controllers</a></li>
+            </ul>
+
+    <article class="phpdocumentor-element phpdocumentor-class">
+        <h2 class="phpdocumentor-content__title">
+            API
+                            <span class="phpdocumentor-class__extends">
+                    extends <a href="../classes/Controllers-Controller.html"><abbr title="\Controllers\Controller">Controller</abbr></a>
+                </span>
+                                                        </h2>
+        <aside class="phpdocumentor-element-found-in">
+            <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+            :
+            <span class="phpdocumentor-element-found-in__line">44</span>
+        </aside>
+
+        <p class="phpdocumentor-class__summary">RESTish API</p>
+        <section class="phpdocumentor-class__description"><p>Mapping between query parameters as dissected by the Dispatcher and this
+RESTish API :</p>
+<pre class="prettyprint"><code class="prettyprint">Controller       -&gt; API
+Action           -&gt; endpoint
+Sub              -&gt; sub-resource
+Request Method   -&gt; mode of operation
+Other Parameters -&gt; query parameters</code></pre>
+<p>Use the request method to define the mode of operation for this endpoint.</p>
+<pre class="prettyprint"><code class="prettyprint">Mode of operation
+  GET    -&gt; fetch
+  POST   -&gt; add
+  PUT    -&gt; update/edit
+  DELETE -&gt; remove</code></pre>
+<p>Prepend names of method available for each resource with 'rest' to make it
+clear what is meant to be a callable action and thwart some malicious
+requests.</p></section>
+
+        <h3>Table of Contents</h3>
+        <table class="phpdocumentor-table_of_contents">
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#constant_STATUS">STATUS</a></th>
+                    <td class="phpdocumentor-cell">Associate a status string to a status code integer.</td>
+                    <td class="phpdocumentor-cell">[100 =&gt; &#039;Continue&#039;, 101 =&gt; &#039;Switching Protocols&#039;, 200 =&gt; &#039;OK&#039;, 201 =&gt; &#039;Created&#039;, 202 =&gt; &#039;Accepted&#039;, 203 =&gt; &#039;Non-Authoritative Information&#039;, 204 =&gt; &#039;No Content&#039;, 205 =&gt; &#039;Reset Content&#039;, 206 =&gt; &#039;Partial Content&#039;, 300 =&gt; &#039;Multiple Choices&#039;, 301 =&gt; &#039;Moved Permanently&#039;, 302 =&gt; &#039;Found&#039;, 303 =&gt; &#039;See Other&#039;, 304 =&gt; &#039;Not Modified&#039;, 305 =&gt; &#039;Use Proxy&#039;, 307 =&gt; &#039;Temporary Redirect&#039;, 400 =&gt; &#039;Bad Request&#039;, 401 =&gt; &#039;Unauthorized&#039;, 402 =&gt; &#039;Payment Required&#039;, 403 =&gt; &#039;Forbidden&#039;, 404 =&gt; &#039;Not Found&#039;, 405 =&gt; &#039;Method Not Allowed&#039;, 406 =&gt; &#039;Not Acceptable&#039;, 407 =&gt; &#039;Proxy Authentication Required&#039;, 408 =&gt; &#039;Request Time-out&#039;, 409 =&gt; &#039;Conflict&#039;, 410 =&gt; &#039;Gone&#039;, 411 =&gt; &#039;Length Required&#039;, 412 =&gt; &#039;Precondition Failed&#039;, 413 =&gt; &#039;Request Entity Too Large&#039;, 414 =&gt; &#039;Request-URI Too Large&#039;, 415 =&gt; &#039;Unsupported Media Type&#039;, 416 =&gt; &#039;Requested range not satisfiable&#039;, 417 =&gt; &#039;Expectation Failed&#039;, 421 =&gt; &#039;Misdirected Request&#039;, 422 =&gt; &#039;Unprocessable Entity&#039;, 423 =&gt; &#039;Locked&#039;, 424 =&gt; &#039;Failed Dependency&#039;, 425 =&gt; &#039;Too Early&#039;, 426 =&gt; &#039;Upgrade Required&#039;, 428 =&gt; &#039;Precondition Required&#039;, 429 =&gt; &#039;Too Many Requests&#039;, 431 =&gt; &#039;Request Header Fields Too Large&#039;, 451 =&gt; &#039;Unavailable For Legal Reasons&#039;, 500 =&gt; &#039;Internal Server Error&#039;, 501 =&gt; &#039;Not Implemented&#039;, 502 =&gt; &#039;Bad Gateway&#039;, 503 =&gt; &#039;Service Unavailable&#039;, 504 =&gt; &#039;Gateway Time-out&#039;, 505 =&gt; &#039;HTTP Version not supported&#039;]</td>
+                </tr>
+                                                                <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#property_args">$args</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#property_model">$model</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#property_view">$view</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#property_layout">$layout</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#property_rendered_page">$rendered_page</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell"><a href=""><abbr title=""></abbr></a></td>
+                </tr>
+                                        <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method___construct">__construct()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_status">status()</a></th>
+                    <td class="phpdocumentor-cell">Return the status string for a given status code</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_emit">emit()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">self</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_call">call()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">self</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_cache">cache()</a></th>
+                    <td class="phpdocumentor-cell">note
+  May be called on a Controller who never (or not yet) received args,
+  in which case it does nothing</td>
+                    <td class="phpdocumentor-cell"><a href="../classes/Controllers-Controller.html"><abbr title="\Controllers\Controller">Controller</abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method___call">__call()</a></th>
+                    <td class="phpdocumentor-cell">Fallback action called when the Dispatcher resolves the url/request to
+a route that does NOT exist.</td>
+                    <td class="phpdocumentor-cell">void</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_runDefault">runDefault()</a></th>
+                    <td class="phpdocumentor-cell">note
+  Prepend all actions meant to be callable by a request with &#039;run&#039;</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_restGET">restGET()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">array|null</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_restPOST">restPOST()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">array|null</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_restPUT">restPUT()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">array|null</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-API.html#method_restDELETE">restDELETE()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">array|null</td>
+                </tr>
+                                                    <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method___construct">__construct()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method_set">set()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">self</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method_loadModel">loadModel()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell"><a href="../classes/Models-Model.html"><abbr title="\Models\Model">Model</abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method_loadView">loadView()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell"><a href="../classes/Views-View.html"><abbr title="\Views\View">View</abbr></a></td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method_serve">serve()</a></th>
+                    <td class="phpdocumentor-cell">note
+  Output buffering is no longer required as everything is composed and
+  rendered before emitting the page once</td>
+                    <td class="phpdocumentor-cell">self</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method_cache">cache()</a></th>
+                    <td class="phpdocumentor-cell">note
+  May be called on a Controller who never (or not yet) received args,
+  in which case it does nothing</td>
+                    <td class="phpdocumentor-cell">self</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method___call">__call()</a></th>
+                    <td class="phpdocumentor-cell">Fallback action called when the Dispatcher resolves the url/request to
+a route that does NOT exist.</td>
+                    <td class="phpdocumentor-cell">void</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Controllers-Controller.html#method_runDefault">runDefault()</a></th>
+                    <td class="phpdocumentor-cell">note
+  Prepend all actions meant to be callable by a request with &#039;run&#039;</td>
+                    <td class="phpdocumentor-cell">mixed</td>
+                </tr>
+                    </table>
+
+                    <section>
+                <h3 class="phpdocumentor-constants__header">Constants</h3>
+                                    <a id="constant_STATUS"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-constant
+            phpdocumentor-constant--
+                    "
+>
+    <h4 class="phpdocumentor-constant__name">STATUS</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">59</span>
+    </aside>
+            <p class="phpdocumentor-summary">Associate a status string to a status code integer.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+        <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$STATUS</span>
+        = <span class="phpdocumentor-signature__default-value">[100 =&gt; &#039;Continue&#039;, 101 =&gt; &#039;Switching Protocols&#039;, 200 =&gt; &#039;OK&#039;, 201 =&gt; &#039;Created&#039;, 202 =&gt; &#039;Accepted&#039;, 203 =&gt; &#039;Non-Authoritative Information&#039;, 204 =&gt; &#039;No Content&#039;, 205 =&gt; &#039;Reset Content&#039;, 206 =&gt; &#039;Partial Content&#039;, 300 =&gt; &#039;Multiple Choices&#039;, 301 =&gt; &#039;Moved Permanently&#039;, 302 =&gt; &#039;Found&#039;, 303 =&gt; &#039;See Other&#039;, 304 =&gt; &#039;Not Modified&#039;, 305 =&gt; &#039;Use Proxy&#039;, 307 =&gt; &#039;Temporary Redirect&#039;, 400 =&gt; &#039;Bad Request&#039;, 401 =&gt; &#039;Unauthorized&#039;, 402 =&gt; &#039;Payment Required&#039;, 403 =&gt; &#039;Forbidden&#039;, 404 =&gt; &#039;Not Found&#039;, 405 =&gt; &#039;Method Not Allowed&#039;, 406 =&gt; &#039;Not Acceptable&#039;, 407 =&gt; &#039;Proxy Authentication Required&#039;, 408 =&gt; &#039;Request Time-out&#039;, 409 =&gt; &#039;Conflict&#039;, 410 =&gt; &#039;Gone&#039;, 411 =&gt; &#039;Length Required&#039;, 412 =&gt; &#039;Precondition Failed&#039;, 413 =&gt; &#039;Request Entity Too Large&#039;, 414 =&gt; &#039;Request-URI Too Large&#039;, 415 =&gt; &#039;Unsupported Media Type&#039;, 416 =&gt; &#039;Requested range not satisfiable&#039;, 417 =&gt; &#039;Expectation Failed&#039;, 421 =&gt; &#039;Misdirected Request&#039;, 422 =&gt; &#039;Unprocessable Entity&#039;, 423 =&gt; &#039;Locked&#039;, 424 =&gt; &#039;Failed Dependency&#039;, 425 =&gt; &#039;Too Early&#039;, 426 =&gt; &#039;Upgrade Required&#039;, 428 =&gt; &#039;Precondition Required&#039;, 429 =&gt; &#039;Too Many Requests&#039;, 431 =&gt; &#039;Request Header Fields Too Large&#039;, 451 =&gt; &#039;Unavailable For Legal Reasons&#039;, 500 =&gt; &#039;Internal Server Error&#039;, 501 =&gt; &#039;Not Implemented&#039;, 502 =&gt; &#039;Bad Gateway&#039;, 503 =&gt; &#039;Service Unavailable&#039;, 504 =&gt; &#039;Gateway Time-out&#039;, 505 =&gt; &#039;HTTP Version not supported&#039;]</span>
+    </code>
+        <section class="phpdocumentor-description">1xx Informational
+2xx Success
+3xx Redirection
+4xx Client Error
+5xx Server Error</section>
+    </article>
+                                            </section>
+        
+                    <section>
+                <h3 class="phpdocumentor-properties__header">Properties</h3>
+                                                                    <a id="property_args"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--public
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$args</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">20</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__name">$args</span>
+         = <span class="phpdocumentor-signature__default-value">[]</span>    </code>
+    </article>
+                                    <a id="property_model"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$model</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">22</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__name">$model</span>
+            </code>
+    </article>
+                                    <a id="property_view"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$view</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">23</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__name">$view</span>
+            </code>
+    </article>
+                                    <a id="property_layout"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$layout</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">24</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__name">$layout</span>
+         = <span class="phpdocumentor-signature__default-value">&#039;Minimal&#039;</span>    </code>
+    </article>
+                                    <a id="property_rendered_page"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$rendered_page</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">26</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__name">$rendered_page</span>
+         = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span>    </code>
+    </article>
+                            </section>
+        
+                    <section>
+                <h3 class="phpdocumentor-methods__header">Methods</h3>
+                                    <a id="method___construct"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__construct()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">113</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__construct</span>(
+                    <span class="phpdocumentor-signature__argument">
+            [                <span class="phpdocumentor-signature__argument__name">$args</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$args</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">[]</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_status"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">status()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">133</span>
+    </aside>
+        <p class="phpdocumentor-summary">Return the status string for a given status code</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">status</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$code</span> :
+                <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$code</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            
+</article>
+                                    <a id="method_emit"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--protected
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">emit()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">141</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                                <span class="phpdocumentor-signature__name">emit</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$data</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array|null</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$status_code</span> :
+                <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">self</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$data</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array|null</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$status_code</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            
+</article>
+                                    <a id="method_call"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">call()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">155</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">call</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">self</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            
+</article>
+                                    <a id="method_cache"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">cache()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">200</span>
+    </aside>
+        <p class="phpdocumentor-summary">note
+  May be called on a Controller who never (or not yet) received args,
+  in which case it does nothing</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">cache</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type"><a href="../classes/Controllers-Controller.html"><abbr title="\Controllers\Controller">Controller</abbr></a></span>
+    </code>
+
+    
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">note</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>Overriding Controller-&gt;cache()</p>
+<p>This controller emits json content and need to set an appropriate
+header before serving.</p>
+<p>The html cache behaviour is not suitable for calls to this RESTish
+API controller</p>
+<p>As a hacky workaround, this turns cache() into a NOP</p></section></dd>
+                                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">todo</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><ul>
+<li>[ ] Handle Dispatcher-level cache for json emission more gracefully</li>
+</ul></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="../classes/Controllers-Controller.html"><abbr title="\Controllers\Controller">Controller</abbr></a></span>
+            
+</article>
+                                    <a id="method___call"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__call()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">217</span>
+    </aside>
+        <p class="phpdocumentor-summary">Fallback action called when the Dispatcher resolves the url/request to
+a route that does NOT exist.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__call</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$name</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$arguments</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$name</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$arguments</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">example</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>Serve a 404 page.</p></section></dd>
+                                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">todo</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>Research if that use case for __call is ill-advised.</p></section></dd>
+                                    </dl>
+    
+    
+</article>
+                                    <a id="method_runDefault"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                        phpdocumentor-element--abstract                                "
+>
+    <h4 class="phpdocumentor-method__name">runDefault()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">226</span>
+    </aside>
+        <p class="phpdocumentor-summary">note
+  Prepend all actions meant to be callable by a request with &#039;run&#039;</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__abstract">abstract</span>                        <span class="phpdocumentor-signature__name">runDefault</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$args</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$args</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">note</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>Prepend all model mode of operation meant to be callable by a request
+with 'op'</p></section></dd>
+                                    </dl>
+    
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_restGET"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">restGET()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">231</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                                <span class="phpdocumentor-signature__name">restGET</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array|null</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array|null</span>
+            
+</article>
+                                    <a id="method_restPOST"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">restPOST()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">243</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                                <span class="phpdocumentor-signature__name">restPOST</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array|null</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array|null</span>
+            
+</article>
+                                    <a id="method_restPUT"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">restPUT()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">255</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                                <span class="phpdocumentor-signature__name">restPUT</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array|null</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array|null</span>
+            
+</article>
+                                    <a id="method_restDELETE"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--private
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">restDELETE()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/API.php"><a href="../files/src-controllers-api.html"><abbr title="src/Controllers/API.php">API.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">267</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+                                <span class="phpdocumentor-signature__name">restDELETE</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array|null</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array|null</span>
+            
+</article>
+                                                                    <a id="method___construct"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__construct()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">28</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__construct</span>(
+                    <span class="phpdocumentor-signature__argument">
+            [                <span class="phpdocumentor-signature__argument__name">$args</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span> ]            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$args</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">[]</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                                    <a id="method_set"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">set()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">56</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">set</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$args</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">self</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$args</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            
+</article>
+                                    <a id="method_loadModel"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">loadModel()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">69</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">loadModel</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type"><a href="../classes/Models-Model.html"><abbr title="\Models\Model">Model</abbr></a></span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="../classes/Models-Model.html"><abbr title="\Models\Model">Model</abbr></a></span>
+            
+</article>
+                                    <a id="method_loadView"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">loadView()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">80</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">loadView</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type"><a href="../classes/Views-View.html"><abbr title="\Views\View">View</abbr></a></span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="../classes/Views-View.html"><abbr title="\Views\View">View</abbr></a></span>
+            
+</article>
+                                    <a id="method_serve"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">serve()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">94</span>
+    </aside>
+        <p class="phpdocumentor-summary">note
+  Output buffering is no longer required as everything is composed and
+  rendered before emitting the page once</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">serve</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">self</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            
+</article>
+                                    <a id="method_cache"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">cache()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">123</span>
+    </aside>
+        <p class="phpdocumentor-summary">note
+  May be called on a Controller who never (or not yet) received args,
+  in which case it does nothing</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">cache</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">self</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            
+</article>
+                                    <a id="method___call"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                        phpdocumentor-element--abstract                                "
+>
+    <h4 class="phpdocumentor-method__name">__call()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">147</span>
+    </aside>
+        <p class="phpdocumentor-summary">Fallback action called when the Dispatcher resolves the url/request to
+a route that does NOT exist.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__abstract">abstract</span>                        <span class="phpdocumentor-signature__name">__call</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$name</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                    <span class="phpdocumentor-signature__argument">
+            ,                 <span class="phpdocumentor-signature__argument__name">$arguments</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$name</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$arguments</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+                <h5 class="phpdocumentor-tag-list__heading">Tags</h5>
+        <dl class="phpdocumentor-tag-list">
+                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">example</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>Serve a 404 page.</p></section></dd>
+                                                                <dt class="phpdocumentor-tag-list__entry">
+                        <span class="phpdocumentor-tag__name">todo</span>
+                    </dt>
+                    <dd class="phpdocumentor-tag-list__definition"><section class="phpdocumentor-description"><p>Research if that use case for __call is ill-advised.</p></section></dd>
+                                    </dl>
+    
+    
+</article>
+                                    <a id="method_runDefault"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                        phpdocumentor-element--abstract                                "
+>
+    <h4 class="phpdocumentor-method__name">runDefault()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Controllers/Controller.php"><a href="../files/src-controllers-controller.html"><abbr title="src/Controllers/Controller.php">Controller.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">154</span>
+    </aside>
+        <p class="phpdocumentor-summary">note
+  Prepend all actions meant to be callable by a request with &#039;run&#039;</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__abstract">abstract</span>                        <span class="phpdocumentor-signature__name">runDefault</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$args</span> :
+                <span class="phpdocumentor-signature__argument__return-type">array</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">mixed</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$args</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">mixed</span>
+            
+</article>
+                            </section>
+            </article>
+            <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+                <h2>Search results</h2>
+                <ul class="phpdocumentor-search-results__entries">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

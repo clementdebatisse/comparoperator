@@ -20,7 +20,7 @@
         "update-php": "php composer.phar update",
         "doc-php": "php phpDocumentor.phar -d ./src -t docs/ -s graphs.enabled=true",
         "test-js": "echo \"Error: no test specified\" && exit 1",
-        "test-php": "./vendor/bin/phpunit tests",
+        "test-php": "./vendor/bin/phpunit --colors tests",
         "test": "npm run test-php && npm run test-js",
         "list-test-php": "./vendor/bin/phpunit --list-tests",
         "build-sass": "node-sass resources/sass/style.scss -o public/css",

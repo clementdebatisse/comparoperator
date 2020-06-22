@@ -32,42 +32,42 @@ VALUES
         1,
         'Club Med',
         'https://www.clubmed.fr/',
-        'images/products/operators/clubmed.svg',
+        'images/operators/clubmed.svg',
         0
     ),
     (
         2,
         'FRAM',
         'https://www.fram.fr/',
-        'images/products/operators/fram.svg',
+        'images/operators/fram.svg',
         0
     ),
     (
         3,
         'Marmara',
         'https://www.tui.fr/gamme-club-marmara/',
-        'images/products/operators/marmara.svg',
+        'images/operators/marmara.svg',
         1
     ),
     (
         4,
         'Lookea',
         'https://www.tui.fr/',
-        'images/products/operators/lookea.svg',
+        'images/operators/lookea.svg',
         0
     ),
     (
         5,
         'Promovacances',
         'https://www.promovacances.com/',
-        'images/products/operators/promovacances.svg',
+        'images/operators/promovacances.svg',
         1
     ),
     (
         6,
         'Expedia',
         'https://www.expedia.fr/',
-        'images/products/operators/expedia.svg',
+        'images/operators/expedia.svg',
         0
     );
 
@@ -91,7 +91,7 @@ VALUES
         '2020-05-10 07:01:01',
         'Corse',
         500,
-        'images/products/destinations/0001.jpg'
+        'images/destinations/0001.jpg'
     ),
     (
         2,
@@ -99,7 +99,7 @@ VALUES
         '2020-05-10 07:01:02',
         'Corse',
         500,
-        'images/products/destinations/0002.jpg'
+        'images/destinations/0002.jpg'
     ),
     (
         3,
@@ -107,7 +107,7 @@ VALUES
         '2020-05-10 07:01:03',
         'Corse',
         499,
-        'images/products/destinations/0003.jpg'
+        'images/destinations/0003.jpg'
     ),
     (
         4,
@@ -115,7 +115,7 @@ VALUES
         '2020-05-10 07:01:04',
         'Corse',
         750,
-        'images/products/destinations/0004.jpg'
+        'images/destinations/0004.jpg'
     ),
     (
         5,
@@ -123,7 +123,7 @@ VALUES
         '2020-05-10 07:01:05',
         'Budapest',
         800,
-        'images/products/destinations/0005.jpg'
+        'images/destinations/0005.jpg'
     ),
     (
         6,
@@ -131,7 +131,7 @@ VALUES
         '2020-05-10 07:01:06',
         'Budapest',
         725,
-        'images/products/destinations/0006.jpg'
+        'images/destinations/0006.jpg'
     ),
     (
         7,
@@ -139,7 +139,7 @@ VALUES
         '2020-05-10 07:01:07',
         'Budapest',
         910,
-        'images/products/destinations/0007.jpg'
+        'images/destinations/0007.jpg'
     ),
     (
         8,
@@ -147,7 +147,7 @@ VALUES
         '2020-05-10 07:01:08',
         'Budapest',
         899,
-        'images/products/destinations/0008.jpg'
+        'images/destinations/0008.jpg'
     ),
     (
         9,
@@ -155,7 +155,7 @@ VALUES
         '2020-05-10 07:01:09',
         'Osaka',
         1500,
-        'images/products/destinations/0009.jpg'
+        'images/destinations/0009.jpg'
     ),
     (
         10,
@@ -163,7 +163,7 @@ VALUES
         '2020-05-10 07:01:10',
         'Osaka',
         2500,
-        'images/products/destinations/0010.jpg'
+        'images/destinations/0010.jpg'
     ),
     (
         11,
@@ -171,7 +171,7 @@ VALUES
         '2020-05-10 07:01:11',
         'Osaka',
         2499,
-        'images/products/destinations/0011.jpg'
+        'images/destinations/0011.jpg'
     ),
     (
         12,
@@ -179,7 +179,7 @@ VALUES
         '2020-05-10 07:01:12',
         'Berlin',
         400,
-        'images/products/destinations/0012.jpg'
+        'images/destinations/0012.jpg'
     ),
     (
         13,
@@ -187,7 +187,7 @@ VALUES
         '2020-05-10 07:01:13',
         'Berlin',
         350,
-        'images/products/destinations/0013.jpg'
+        'images/destinations/0013.jpg'
     ),
     (
         14,
@@ -195,7 +195,7 @@ VALUES
         '2020-05-10 07:01:14',
         'Berlin',
         500,
-        'images/products/destinations/0014.jpg'
+        'images/destinations/0014.jpg'
     ),
     (
         15,
@@ -203,7 +203,7 @@ VALUES
         '2020-05-10 07:01:15',
         'Lyon',
         200,
-        'images/products/destinations/0015.jpg'
+        'images/destinations/0015.jpg'
     ),
     (
         16,
@@ -211,7 +211,7 @@ VALUES
         '2020-05-10 07:01:16',
         'Lyon',
         100,
-        'images/products/destinations/0016.jpg'
+        'images/destinations/0016.jpg'
     ),
     (
         17,
@@ -219,7 +219,7 @@ VALUES
         '2020-05-10 07:01:17',
         'Lyon',
         150,
-        'images/products/destinations/0017.jpg'
+        'images/destinations/0017.jpg'
     ),
     (
         18,
@@ -227,7 +227,7 @@ VALUES
         '2020-05-10 07:01:18',
         'Lyon',
         199,
-        'images/products/destinations/0018.jpg'
+        'images/destinations/0018.jpg'
     ),
     (
         19,
@@ -235,7 +235,7 @@ VALUES
         '2020-05-10 07:01:19',
         'Lyon',
         119,
-        'images/products/destinations/0019.jpg'
+        'images/destinations/0019.jpg'
     ),
     (
         20,
@@ -243,7 +243,7 @@ VALUES
         '2020-05-10 07:01:20',
         'Lyon',
         149,
-        'images/products/destinations/0020.jpg'
+        'images/destinations/0020.jpg'
     );
 
 -- --------------------------------------------------------

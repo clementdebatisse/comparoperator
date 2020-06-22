@@ -10,12 +10,13 @@ namespace Entities;
 class Location extends Entity
 {
     /**
-     * @var array [ string $field_name => mixed $filter_definition ]
+     * @var array <string, mixed>[] [$field_name => $filter_definition]
      */
-    protected $definitions =
+    const definitions =
     [
         'name' => [
-            'filter' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => ['regexp' => '/^([A-Za-z0-9_\-\s]+)$/']
         ],
         'thumbnail' => [
             'filter' => FILTER_VALIDATE_REGEXP,
@@ -29,10 +30,9 @@ class Location extends Entity
     ];
 
     /**
-     * @param  array $data [ string $field_name => mixed $value ]
+     * List of field names required for insertion in database.
+     * 
+     * @var array string[]
      */
-    public function __construct(array $data)
-    {
-        $this->data = $data;
-    }
+    const required_fields = [];
 }

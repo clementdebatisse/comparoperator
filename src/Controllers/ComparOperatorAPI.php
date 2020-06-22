@@ -207,11 +207,11 @@ final class ComparOperatorAPI extends API
      *   "product_id": 5,
      *   "content": "Rewind displays your bookmarks filtered by date, with thumbnails and instant search. It takes one click to see the links you saved yesterday, last week, last month. It's totally free and it relies on your local bookmarks, you don't have to create an account.",
      *   "media": [
-     *     "public/images/products/1_Rewind_0.webp",
-     *     "public/images/products/1_Rewind_1.webp",
-     *     "public/images/products/1_Rewind_2.webp",
-     *     "public/images/products/1_Rewind_3.webp",
-     *     "public/images/products/1_Rewind_4.webp"
+     *     "images/products/1_Rewind_0.webp",
+     *     "images/products/1_Rewind_1.webp",
+     *     "images/products/1_Rewind_2.webp",
+     *     "images/products/1_Rewind_3.webp",
+     *     "images/products/1_Rewind_4.webp"
      *   ],
      *   "comments": [
      *     {
@@ -271,7 +271,8 @@ final class ComparOperatorAPI extends API
         try {
             $product = $this->model->getProduct($product_id);
             $comments = ['comments' => $this->model->getProductComments($product_id)];
-            $results = array_merge($product, $comments);
+            // $results = array_merge($product, $comments);
+            $results = $comments + $product;
 
             if (empty($results)) {
                 /* Not Found */
@@ -323,7 +324,7 @@ final class ComparOperatorAPI extends API
      *     "created_at": "2020-05-10 07:01:00",
      *     "website": "https://rewind.netlify.app/?ref=producthunt",
      *     "summary": "Your bookmarks, by date, with thumbnails and instant search",
-     *     "thumbnail": "public/images/products/thumbnails/1_Rewind.webp",
+     *     "thumbnail": "images/products/thumbnails/1_Rewind.webp",
      *     "votes_count": 0,
      *     "comments_count": 0
      *   },
@@ -333,7 +334,7 @@ final class ComparOperatorAPI extends API
      *     "created_at": "2020-05-10 07:01:00",
      *     "website": "https://rewind.netlify.app/?ref=producthunt",
      *     "summary": "Your bookmarks, by date, with thumbnails and instant search",
-     *     "thumbnail": "public/images/products/thumbnails/2_Buy-For-Life.webp",
+     *     "thumbnail": "images/products/thumbnails/2_Buy-For-Life.webp",
      *     "votes_count": 0,
      *     "comments_count": 0
      *   }
@@ -420,7 +421,7 @@ final class ComparOperatorAPI extends API
      *     "created_at": "2020-05-10 07:01:00",
      *     "website": "https://rewind.netlify.app/?ref=producthunt",
      *     "summary": "Your bookmarks, by date, with thumbnails and instant search",
-     *     "thumbnail": "public/images/products/thumbnails/1_Rewind.webp",
+     *     "thumbnail": "images/products/thumbnails/1_Rewind.webp",
      *     "votes_count": 0,
      *     "comments_count": 0
      *   },
@@ -430,7 +431,7 @@ final class ComparOperatorAPI extends API
      *     "created_at": "2020-05-10 07:01:00",
      *     "website": "https://rewind.netlify.app/?ref=producthunt",
      *     "summary": "Your bookmarks, by date, with thumbnails and instant search",
-     *     "thumbnail": "public/images/products/thumbnails/2_Buy-For-Life.webp",
+     *     "thumbnail": "images/products/thumbnails/2_Buy-For-Life.webp",
      *     "votes_count": 0,
      *     "comments_count": 0
      *   }

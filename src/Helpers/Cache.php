@@ -132,7 +132,7 @@ class Cache
     /**
      * Load metadata persisted to disk, if any, into the Cache trove.
      *
-     * @return self
+     * @return $this
      */
     public function load() : self
     {
@@ -142,7 +142,7 @@ class Cache
     /**
      * Persist Cache trove metadata to disk.
      *
-     * @return self
+     * @return $this
      */
     protected function save() : self
     {
@@ -303,7 +303,7 @@ class Cache
     /**
      * Clear all files associated with this Cache, no questions asked.
      *
-     * @return self
+     * @return $this
      */
     public function clearCache(): self
     {

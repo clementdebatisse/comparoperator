@@ -91,13 +91,16 @@
     npm test
     ```
 
-## docs
+## [docs](https://pozorfluo.github.io/comparoperator/)
 
 ## app flowchart
 ![flowchart](resources/images/flowchart.svg)
 
 ## db
 ![db](resources/images/tp-comparoperator-db.png)
+
+## class diagram
+![class](docs/graphs/classes.svg)
 
 ## wireframes
 

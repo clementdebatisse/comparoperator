@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="icon" href="../images/favicon.ico"/>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script defer src="../js/searchIndex.js"></script>
+    </head>
+<body>
+<header class="phpdocumentor-top-header"></header>
+<header class="phpdocumentor-header">
+    <section class="phpdocumentor-section">
+        <h1 class="phpdocumentor-title">Documentation</h1>
+    </section>
+</header>
+<main class="phpdocumentor">
+    <div class="phpdocumentor-section">
+        <aside class="three phpdocumentor-columns phpdocumentor-sidebar">
+    <section data-search-form class="phpdocumentor-search">
+        <h1 class="phpdocumentor-sidebar__category-header">Search</h1>
+        <label class="phpdocumentor-label">
+            <span class="visually-hidden">Search for</span>
+            <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+        </label>
+    </section>
+
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Namespaces</h1>
+            <h2 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/default.html"><abbr title="\">Global</abbr></a></h2>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/controllers.html"><abbr title="\Controllers">Controllers</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/entities.html"><abbr title="\Entities">Entities</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/helpers.html"><abbr title="\Helpers">Helpers</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/interfaces.html"><abbr title="\Interfaces">Interfaces</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/layouts.html"><abbr title="\Layouts">Layouts</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/models.html"><abbr title="\Models">Models</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                                    <li><a href="../namespaces/models-endpoints.html"><abbr title="\Models\Endpoints">Endpoints</abbr></a></li>
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/templates.html"><abbr title="\Templates">Templates</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+                    <h3 class="phpdocumentor-sidebar__root-namespace"><a href="../namespaces/views.html"><abbr title="\Views">Views</abbr></a></h3>
+            <ul class="phpdocumentor-list">
+                            </ul>
+            
+    
+    <h1 class="phpdocumentor-sidebar__category-header">Reports</h1>
+        <h2 class="phpdocumentor-sidebar__root-package"><a href="../graphs/classes.html">Class Diagram</a></h2>
+        <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/deprecated.html">Deprecated</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/errors.html">Errors</a></h2>
+    <h2 class="phpdocumentor-sidebar__root-package"><a href="../reports/markers.html">Markers</a></h2>
+</aside>
+
+        <div class="nine phpdocumentor-columns phpdocumentor-content">
+            <ul class="phpdocumentor-breadcrumbs">
+    <li><a href="../index.html">Home</a></li>
+                        <li><a href="../namespaces/helpers.html">Helpers</a></li>
+            </ul>
+
+    <article class="phpdocumentor-element phpdocumentor-class">
+        <h2 class="phpdocumentor-content__title">
+            Cache
+                                                        </h2>
+        <aside class="phpdocumentor-element-found-in">
+            <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+            :
+            <span class="phpdocumentor-element-found-in__line">16</span>
+        </aside>
+
+        <p class="phpdocumentor-class__summary">note
+  If a cache file exists and is referenced in the trove and is not past its
+  expiration date, it is considered valid and Dispatcher will serve it.</p>
+        <section class="phpdocumentor-class__description"></section>
+
+        <h3>Table of Contents</h3>
+        <table class="phpdocumentor-table_of_contents">
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#constant_CACHE_PATH">CACHE_PATH</a></th>
+                    <td class="phpdocumentor-cell">Path to root cache folder.</td>
+                    <td class="phpdocumentor-cell">ROOT . &#039;cache/&#039;</td>
+                </tr>
+                                        <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#property_list">$list</a></th>
+                    <td class="phpdocumentor-cell">&#039;Set&#039; of currently instanced caches.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#property_name">$name</a></th>
+                    <td class="phpdocumentor-cell">Cache name.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#property_ttl">$ttl</a></th>
+                    <td class="phpdocumentor-cell">Time To Live in seconds before an item in cache is considered stale.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#property_ttl_path">$ttl_path</a></th>
+                    <td class="phpdocumentor-cell">Path to this cache .ttl file.</td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#property_prune_odds">$prune_odds</a></th>
+                    <td class="phpdocumentor-cell">Odds that pruning will be actually triggered when calling pruneCache().</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#property_trove">$trove</a></th>
+                    <td class="phpdocumentor-cell">Cache metadata collection.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                                                                <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method___construct">__construct()</a></th>
+                    <td class="phpdocumentor-cell">Create a new Cache instance.</td>
+                    <td class="phpdocumentor-cell">void</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_listCaches">listCaches()</a></th>
+                    <td class="phpdocumentor-cell">List currently instanced Cache by name.</td>
+                    <td class="phpdocumentor-cell">array</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_exists">exists()</a></th>
+                    <td class="phpdocumentor-cell">Determine if a Cache instance of given name exists.</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_load">load()</a></th>
+                    <td class="phpdocumentor-cell">Load metadata persisted to disk, if any, into the Cache trove.</td>
+                    <td class="phpdocumentor-cell">$this</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_save">save()</a></th>
+                    <td class="phpdocumentor-cell">Persist Cache trove metadata to disk.</td>
+                    <td class="phpdocumentor-cell">$this</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_getCached">getCached()</a></th>
+                    <td class="phpdocumentor-cell">Retrieve cached content for given key if it exists and is not stale.</td>
+                    <td class="phpdocumentor-cell">string|null</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_isCached">isCached()</a></th>
+                    <td class="phpdocumentor-cell">Determine if a valid cached version exists for given key.</td>
+                    <td class="phpdocumentor-cell">bool</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_pruneCache">pruneCache()</a></th>
+                    <td class="phpdocumentor-cell">Create cache.ttl ticker if it does NOT exist
+If at least a ttl period has elapsed since last pruning
+  Delete each cached files past ttl
+  Reset ticker</td>
+                    <td class="phpdocumentor-cell">self</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Helpers-Cache.html#method_clearCache">clearCache()</a></th>
+                    <td class="phpdocumentor-cell">Clear all files associated with this Cache, no questions asked.</td>
+                    <td class="phpdocumentor-cell">$this</td>
+                </tr>
+                                            </table>
+
+                    <section>
+                <h3 class="phpdocumentor-constants__header">Constants</h3>
+                                    <a id="constant_CACHE_PATH"></a>
+<article
+        class="
+            phpdocumentor-element
+            phpdocumentor-constant
+            phpdocumentor-constant--
+                    "
+>
+    <h4 class="phpdocumentor-constant__name">CACHE_PATH</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">23</span>
+    </aside>
+            <p class="phpdocumentor-summary">Path to root cache folder.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility"></span>
+        <span class="phpdocumentor-signature__type">string</span>
+        <span class="phpdocumentor-signature__name">$CACHE_PATH</span>
+        = <span class="phpdocumentor-signature__default-value">ROOT . &#039;cache/&#039;</span>
+    </code>
+    </article>
+                                            </section>
+        
+                    <section>
+                <h3 class="phpdocumentor-properties__header">Properties</h3>
+                                    <a id="property_list"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--private
+            phpdocumentor-property--static                    "
+>
+    <h4 class="phpdocumentor-property__name">$list</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">32</span>
+    </aside>
+            <p class="phpdocumentor-summary">&#039;Set&#039; of currently instanced caches.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$list</span>
+         = <span class="phpdocumentor-signature__default-value">[]</span>    </code>
+        <section class="phpdocumentor-description">Used to forbid instancing multiple Cache with the same name.</section>
+    </article>
+                                    <a id="property_name"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--public
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$name</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">39</span>
+    </aside>
+            <p class="phpdocumentor-summary">Cache name.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__type">string</span>
+        <span class="phpdocumentor-signature__name">$name</span>
+            </code>
+    </article>
+                                    <a id="property_ttl"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$ttl</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">59</span>
+    </aside>
+            <p class="phpdocumentor-summary">Time To Live in seconds before an item in cache is considered stale.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$ttl</span>
+         = <span class="phpdocumentor-signature__default-value">30</span>    </code>
+        <section class="phpdocumentor-description">A specific ttl is configurable per response status code.</section>
+    </article>
+                                    <a id="property_ttl_path"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$ttl_path</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">69</span>
+    </aside>
+            <p class="phpdocumentor-summary">Path to this cache .ttl file.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">string</span>
+        <span class="phpdocumentor-signature__name">$ttl_path</span>
+            </code>
+        <section class="phpdocumentor-description">.ttl files are used to store serialized version of the Cache trove and as
+persistent tickers to determine when pruning is due.</section>
+    </article>
+                                    <a id="property_prune_odds"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$prune_odds</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">79</span>
+    </aside>
+            <p class="phpdocumentor-summary">Odds that pruning will be actually triggered when calling pruneCache().</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$prune_odds</span>
+            </code>
+        <section class="phpdocumentor-description">Used to throttle possibly expensive cache operations. Does not affect
+cache invalidation.</section>
+    </article>
+                                    <a id="property_trove"></a>
+<article
+        class="
+            phpdocumentor-property
+            phpdocumentor-property--protected
+                                "
+>
+    <h4 class="phpdocumentor-property__name">$trove</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">89</span>
+    </aside>
+            <p class="phpdocumentor-summary">Cache metadata collection.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__type">array</span>
+        <span class="phpdocumentor-signature__name">$trove</span>
+            </code>
+    </article>
+                                                            </section>
+        
+                    <section>
+                <h3 class="phpdocumentor-methods__header">Methods</h3>
+                                    <a id="method___construct"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">__construct()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">102</span>
+    </aside>
+        <p class="phpdocumentor-summary">Create a new Cache instance.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">__construct</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$name</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">void</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>Caller must check and get the actual Cache name used and must NOT assume
+the one it requested was free.</p></section>
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$name</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+    
+</article>
+                                    <a id="method_listCaches"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">listCaches()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">118</span>
+    </aside>
+        <p class="phpdocumentor-summary">List currently instanced Cache by name.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">listCaches</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">array</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array</span>
+            
+</article>
+                                    <a id="method_exists"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                    phpdocumentor-element--static                    "
+>
+    <h4 class="phpdocumentor-method__name">exists()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">128</span>
+    </aside>
+        <p class="phpdocumentor-summary">Determine if a Cache instance of given name exists.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                        <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">exists</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$name</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$name</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            
+</article>
+                                    <a id="method_load"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">load()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">137</span>
+    </aside>
+        <p class="phpdocumentor-summary">Load metadata persisted to disk, if any, into the Cache trove.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">load</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">$this</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">$this</span>
+            
+</article>
+                                    <a id="method_save"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--protected
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">save()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">147</span>
+    </aside>
+        <p class="phpdocumentor-summary">Persist Cache trove metadata to disk.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">protected</span>
+                                <span class="phpdocumentor-signature__name">save</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">$this</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">$this</span>
+            
+</article>
+                                    <a id="method_getCached"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">getCached()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">157</span>
+    </aside>
+        <p class="phpdocumentor-summary">Retrieve cached content for given key if it exists and is not stale.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">getCached</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">string|null</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string|null</span>
+            
+</article>
+                                    <a id="method_isCached"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">isCached()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">179</span>
+    </aside>
+        <p class="phpdocumentor-summary">Determine if a valid cached version exists for given key.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">isCached</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$key</span> :
+                <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">bool</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$key</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            
+</article>
+                                    <a id="method_pruneCache"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">pruneCache()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">279</span>
+    </aside>
+        <p class="phpdocumentor-summary">Create cache.ttl ticker if it does NOT exist
+If at least a ttl period has elapsed since last pruning
+  Delete each cached files past ttl
+  Reset ticker</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">pruneCache</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">self</span>
+    </code>
+
+        <section class="phpdocumentor-description"><p>todo</p>
+<ul>
+<li>[ ] Implement probabilistic early expiration.</li>
+<li>[ ] Implement subsequent pre-emptive re-rendering.
+<ul>
+<li>[ ] Throttle/delay pre-emptive re-rendering according to server
+load.</li>
+<li>[ ] See <a href="https://www.php.net/manual/en/function.proc-nice.php">https://www.php.net/manual/en/function.proc-nice.php</a></li>
+</ul></li>
+<li>[ ] Consider locking a Cache item so that only process at a time can
+populate it.
+<ul>
+<li>[ ] Serve stale or keep concurrent process/requests on hold until
+lock is released.</li>
+</ul></li>
+<li>[ ] Limit Cache to a size or number of CacheItem.
+<ul>
+<li>[ ] Toss CacheItem based on freshness/popularity.</li>
+</ul></li>
+</ul>
+<p>note
+The goal is to pre-emptively re-render often requested pages that have
+been rendered and cached once they expire or are invalidated.</p>
+<p><del>Structure the cached file names as follow :</del>
+<del>sanitized_query_string.popularity_counter.extension</del></p>
+<p>Where popularity_counter is an integer incremented each time that page
+is requested and decremented each time it is pre-emptively re-rendered.</p>
+<p>Use popularity_counter to tune the probability distribution of the
+cache pruning lottery.</p>
+<p>Check if a request page exists in cache by populating an array of
+exploded filenames present in the cache folder and checking for the
+requested page existence in the [0] column.</p>
+<p>Alternatively, populate an array and write to cache.ttl on exit. This
+means that scanning directory is done when there's no rush.</p>
+<p>Solve the filename length problem by storing the query in json,
+assigning fixed length unique id to use a file name for each query.</p>
+<p>See file_put_contents($filename, $contents, LOCK_EX);</p>
+<p>e.g.
+,
+&quot;controller%3DHome@Cookie:Value&quot; : {
+&quot;filename&quot; : &quot;5eb62a757a56e0.61116934.html&quot;,
+&quot;tags&quot; : [&quot;tagA&quot;, &quot;tagB&quot;],
+&quot;popularity&quot; : 5,
+&quot;render_time&quot; : 0.0010299682617188,
+&quot;expires_at&quot; : 1590134476,
+},</p>
+<p><em><strong>IMPORTANT</strong></em>
+All of this operations happens after the page as been served.</p>
+<p>time() - $this-&gt;ttl) &gt; filemtime($cache_ttl_path)</p>
+<p>function x-fetch(key, ttl, beta=1) {
+value, delta, expiry ← cache_read(key)
+if (!value || time() − delta <em> beta </em> log(rand(0,1)) ≥ expiry) {
+start ← time()
+value ← recompute_value()
+delta ← time() – start
+cache_write(key, (value, delta), ttl)
+}
+return value</p></section>
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            
+</article>
+                                    <a id="method_clearCache"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">clearCache()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Helpers/Cache.php"><a href="../files/src-helpers-cache.html"><abbr title="src/Helpers/Cache.php">Cache.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">308</span>
+    </aside>
+        <p class="phpdocumentor-summary">Clear all files associated with this Cache, no questions asked.</p>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">clearCache</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">$this</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">$this</span>
+            
+</article>
+                                                            </section>
+            </article>
+            <div data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+
+                <h2>Search results</h2>
+                <ul class="phpdocumentor-search-results__entries">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
